@@ -11,7 +11,7 @@ export default class Login extends Component {
     static navigationOptions = {
         header: null,
     }
-    
+
     render() {
         return (
             <Container>
@@ -27,7 +27,7 @@ export default class Login extends Component {
                     <Label>Senha</Label>
                     <InputText />
 
-                    <Button>
+                    <Button onPress={() => this.props.navigation.navigate('App')}>
                         <Text style={{ fontSize: 20 }}>LOGIN</Text>
                     </Button>
 

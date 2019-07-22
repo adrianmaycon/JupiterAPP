@@ -1,15 +1,38 @@
 import React from 'react';
-import { createSwitchNavigator, createStackNavigator, createAppContainer } from "react-navigation";
+import { createSwitchNavigator, createStackNavigator, createDrawerNavigator, createAppContainer } from "react-navigation";
+import Login from './src/screens/Login';
+import DrawerContainer from './src/components/DrawerContainer';
+import Header from './src/components/Header';
 
-import Login from './src/screens/Login'
+import Dashboard from './src/screens/Dashboard';
 
-const LoginStack = createStackNavigator({ Login })
+const LoginStack = createStackNavigator({ Login });
 
+const DashboardStack = createStackNavigator({
+	Dashboard: {
+		screen: Dashboard,
+		headerMode: 'screen',
+		navigationOptions: ({ navigation }) => ({
+			header: () => <Header navigation={navigation} title="Dashboard" />
+		})
+	}
+})
+
+const AppDrawer = createDrawerNavigator(
+	{
+		Dashboard: DashboardStack,
+	},
+	{
+		contentComponent: ({ navigation }) => <DrawerContainer navigation={navigation} />,
+		drawerWidth: 300,
+	}
+);
 
 export default createAppContainer(
 	createSwitchNavigator(
 		{
-			Login: LoginStack,
+      Login: LoginStack,
+      App: AppDrawer,
 		},
 		{
 			initialRouteName: 'Login'
