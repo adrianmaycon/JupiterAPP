@@ -7,6 +7,11 @@ import { Header, Label, InputText, Button, Footer } from './styles/LoginStyle';
 const logo_url = 'http://www.cedipte-psicologia.com/images/site/psicologia-01.png';
 
 export default class Login extends Component {
+
+    static navigationOptions = {
+        header: null,
+    }
+    
     render() {
         return (
             <Container>
