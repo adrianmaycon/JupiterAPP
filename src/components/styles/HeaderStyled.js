@@ -4,17 +4,17 @@ import styled from 'styled-components/native'
 export const Bar = styled.View`
     display: flex;
     flex-direction: row;
-    height: 60px;
-    border-bottom-color: #ebebeb;
-    border-bottom-width: 2px;
+    height: 50px;
+    justify-content: space-between;
+    background-color: #7159C1;
+    border-bottom-color: #634DA8;
+    border-bottom-width: 1px;
+    align-items: center;
 `
 
 export const Button = styled.TouchableOpacity`
-    position: absolute;
-    padding-top: 5px;
-    padding-left: 10px;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    padding-right: 20px;
 `
 
 export const TitleCenter = styled.View`
@@ -24,5 +24,6 @@ export const TitleCenter = styled.View`
 `
 
 export const Title = styled.Text`
-    font-size: 23px;
+    font-size: 20px;
+    color: #fff;
 `

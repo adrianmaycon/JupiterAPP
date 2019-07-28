@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.psique"
+        applicationId "com.jupiterapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

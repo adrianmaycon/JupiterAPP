@@ -4,7 +4,9 @@ import { Image, KeyboardAvoidingView, Text } from 'react-native';
 import { Container } from './styles/MainStyle';
 import { Header, Label, InputText, Button, Footer } from './styles/LoginStyle';
 
-const logo_url = 'http://www.cedipte-psicologia.com/images/site/psicologia-01.png';
+// const logo_url = 'http://www.cedipte-psicologia.com/images/site/psicologia-01.png';
+
+const logo_url = 'https://raw.githubusercontent.com/adrianmaycon/MeInforme/master/src/screens/img/Logo.png';
 
 export default class Login extends Component {
 

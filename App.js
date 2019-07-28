@@ -4,7 +4,8 @@ import Login from './src/screens/Login';
 import DrawerContainer from './src/components/DrawerContainer';
 import Header from './src/components/Header';
 
-import Dashboard from './src/screens/Dashboard';
+import Dashboard from './src/screens/App';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 const LoginStack = createStackNavigator({ Login });
 
@@ -13,7 +14,17 @@ const DashboardStack = createStackNavigator({
 		screen: Dashboard,
 		headerMode: 'screen',
 		navigationOptions: ({ navigation }) => ({
-			header: () => <Header navigation={navigation} title="Dashboard" />
+			header: () => <Header navigation={navigation} title="Bem Vindo" />
+		})
+	}
+})
+
+const ProfileScreenStack = createStackNavigator({
+	ProfileScreen: {
+		screen: ProfileScreen,
+		headerMode: 'screen',
+		navigationOptions: ({ navigation }) => ({
+			header: () => <Header navigation={navigation} title="Bem Vindo" />
 		})
 	}
 })
@@ -21,6 +32,7 @@ const DashboardStack = createStackNavigator({
 const AppDrawer = createDrawerNavigator(
 	{
 		Dashboard: DashboardStack,
+		ProfileScreen: ProfileScreenStack,
 	},
 	{
 		contentComponent: ({ navigation }) => <DrawerContainer navigation={navigation} />,
