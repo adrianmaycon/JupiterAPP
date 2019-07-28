@@ -33,6 +33,12 @@ target 'JupiterApp' do
 
 
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+
+  pod 'react-native-pdf', :path => '../node_modules/react-native-pdf'
+
   target 'JupiterAppTests' do
     inherit! :search_paths
     # Pods for testing

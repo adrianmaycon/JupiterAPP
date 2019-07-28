@@ -6,6 +6,18 @@ const logo_url = 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-1/p160x160/5629842
 
 export default DrawerContainer = ({ navigation }) => {
 
+  handlePress = () => {
+    Alert.alert(
+        'Atenção!',
+        'Realmente deseja sair do aplicativo?',
+        [
+            { text: 'Cancelar', onPress: () => navigation.navigate('Dashboard') },
+            { text: 'OK', onPress: () => navigation.navigate('Login') },
+        ],
+        { cancelable: true }
+    )
+}
+
   return (
     <Container>
       <Header androidStatusBarColor="#573ea8" hasTabs>
@@ -23,7 +35,7 @@ export default DrawerContainer = ({ navigation }) => {
               <Text>Principal</Text>
             </Left>
             <Right>
-              <Icon name="arrow-forward" />
+              <Icon name="ios-arrow-forward" />
             </Right>
           </ListItem>
           <ListItem >
@@ -82,7 +94,7 @@ export default DrawerContainer = ({ navigation }) => {
               <Icon name="arrow-forward" />
             </Right>
           </ListItem>
-          <ListItem onPress={() => navigation.navigate('Login')}>
+          <ListItem onPress={this.handlePress}>
             <Left>
               <Text>Sair da conta</Text>
             </Left>
