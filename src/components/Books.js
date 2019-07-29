@@ -8,7 +8,7 @@ const ListBook = [
     {
         id: 1,
         title: 'Harry Potter e a Pedra Filosofal',
-        description: 'é o primeiro dos sete livros da série de fantasia Harry Potter, escrita por J. K. Rowling...',
+        description: 'é o primeiro dos sete livros da série de fantasia Harry Potter, um maravilhoso livro escrito pela grande J. K. Rowling...',
         image_url: 'https://www.traca.com.br/capas/1118/1118164.jpg',
         pdf_url: 'http://cabana-on.com/Ler/wp-content/uploads/2017/08/J.K.-Rowling-1-Harry-Potter-e-A-Pedra-Filosofal.pdf'
     },
@@ -29,7 +29,7 @@ const ListBook = [
     {
         id: 4,
         title: 'Harry Potter e o Cálice de Fogo',
-        description: ' é um filme britânico-norte-americano de 2005, dirigido por Mike Newell e distribuído pela Warner Bros. Pictures...',
+        description: ' é um filme britânico-norte-americano de 2005, dirigido por Mike Newell e distribuído pela grande Warner Bros. Pictures...',
         image_url: 'http://statics.livrariacultura.net.br/products/capas_lg/535/3056535.jpg',
         pdf_url: 'http://cabana-on.com/Ler/wp-content/uploads/2017/08/J.K.-Rowling-4-Harry-Potter-e-O-Calice-de-Fogo.pdf'
     },
@@ -50,7 +50,7 @@ const ListBook = [
     {
         id: 7,
         title: 'Harry Potter e as Relíquias da ..',
-        description: ' é um romance de fantasia escrito pela britânica J. K. Rowling. É o sétimo e último livro da série Harry Potter...',
+        description: 'é um romance de fantasia escrito pela britânica J. K. Rowling. É o sétimo e último livro da maravilhosa série Harry Potter...',
         image_url: 'https://images-na.ssl-images-amazon.com/images/I/51A6k0YGQOL._SX331_BO1,204,203,200_.jpg',
         pdf_url: 'http://cabana-on.com/Ler/wp-content/uploads/2017/08/J.K.-Rowling-7-Harry-Potter-e-As-Reliquias-da-Morte.pdf'
     },
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     BotaoBook: {
         width: '100%',
         height: 30,
-        borderRadius: 8,
+        borderRadius: 4,
         marginBottom: '3%',
         alignItems: 'center',
         justifyContent: 'center',
