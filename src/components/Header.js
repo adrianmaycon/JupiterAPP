@@ -10,7 +10,7 @@ export default Header = props => {
         <Bar>
             <Image
                 style={{ width: 35, height: 35, marginLeft: 10 }}
-                source={{ uri: 'http://www.cedipte-psicologia.com/images/site/psicologia-01.png' }}
+                source={{ uri: 'https://raw.githubusercontent.com/adrianmaycon/MeInforme/master/src/screens/img/Logo.png' }}
             />
             <TitleCenter>
                 <Title>{props.title}</Title>

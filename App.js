@@ -6,6 +6,7 @@ import Header from './src/components/Header';
 
 import Dashboard from './src/screens/App';
 import ProfileScreen from './src/screens/ProfileScreen';
+import BooksScreen from './src/screens/BooksScreen';
 
 const LoginStack = createStackNavigator({ Login });
 
@@ -24,7 +25,16 @@ const ProfileScreenStack = createStackNavigator({
 		screen: ProfileScreen,
 		headerMode: 'screen',
 		navigationOptions: ({ navigation }) => ({
-			header: () => <Header navigation={navigation} title="Bem Vindo" />
+			header: () => <Header navigation={navigation} title="Configurações" />
+		})
+	}
+})
+const BooksScreenStack = createStackNavigator({
+	BooksScreen: {
+		screen: BooksScreen,
+		headerMode: 'screen',
+		navigationOptions: ({ navigation }) => ({
+			header: () => <Header navigation={navigation} title="Meus Livros" />
 		})
 	}
 })
@@ -33,6 +43,7 @@ const AppDrawer = createDrawerNavigator(
 	{
 		Dashboard: DashboardStack,
 		ProfileScreen: ProfileScreenStack,
+		BooksScreen: BooksScreenStack,
 	},
 	{
 		contentComponent: ({ navigation }) => <DrawerContainer navigation={navigation} />,

@@ -56,7 +56,7 @@ export default DrawerContainer = ({ navigation }) => {
           </ListItem>
           <ListItem>
             <Left>
-              <Text>Minhas Publicações</Text>
+              <Text>Publicações</Text>
             </Left>
             <Right>
               <Icon name="arrow-forward" />
@@ -65,6 +65,14 @@ export default DrawerContainer = ({ navigation }) => {
           <ListItem>
             <Left>
               <Text>Favoritos</Text>
+            </Left>
+            <Right>
+              <Icon name="arrow-forward" />
+            </Right>
+          </ListItem>
+          <ListItem onPress={() => navigation.navigate('BooksScreen')}>
+            <Left>
+              <Text>Livros</Text>
             </Left>
             <Right>
               <Icon name="arrow-forward" />
