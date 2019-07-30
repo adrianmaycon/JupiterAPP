@@ -8,15 +8,15 @@ export default DrawerContainer = ({ navigation }) => {
 
   handlePress = () => {
     Alert.alert(
-        'Atenção!',
-        'Realmente deseja sair do aplicativo?',
-        [
-            { text: 'Cancelar', onPress: () => navigation.navigate('Dashboard') },
-            { text: 'OK', onPress: () => navigation.navigate('Login') },
-        ],
-        { cancelable: true }
+      'Atenção!',
+      'Realmente deseja sair do aplicativo?',
+      [
+        { text: 'Cancelar', onPress: () => navigation.navigate('Dashboard') },
+        { text: 'OK', onPress: () => navigation.navigate('Login') },
+      ],
+      { cancelable: true }
     )
-}
+  }
 
   return (
     <Container>
@@ -30,7 +30,7 @@ export default DrawerContainer = ({ navigation }) => {
       </Header>
       <Content>
         <List>
-          <ListItem onPress={() => navigation.navigate('Dashboard')}> 
+          <ListItem onPress={() => navigation.navigate('Dashboard')}>
             <Left>
               <Text>Principal</Text>
             </Left>
@@ -38,7 +38,8 @@ export default DrawerContainer = ({ navigation }) => {
               <Icon name="ios-arrow-forward" />
             </Right>
           </ListItem>
-          <ListItem >
+          <ListItem itemDivider />
+          <ListItem>
             <Left>
               <Text>Conversas</Text>
             </Left>
@@ -70,6 +71,7 @@ export default DrawerContainer = ({ navigation }) => {
               <Icon name="arrow-forward" />
             </Right>
           </ListItem>
+          <ListItem itemDivider />
           <ListItem onPress={() => navigation.navigate('BooksScreen')}>
             <Left>
               <Text>Livros</Text>
@@ -86,15 +88,8 @@ export default DrawerContainer = ({ navigation }) => {
               <Icon name="arrow-forward" />
             </Right>
           </ListItem>
+          <ListItem itemDivider />
           <ListItem onPress={() => navigation.navigate('ProfileScreen')}>
-            <Left>
-              <Text>Meus Dados</Text>
-            </Left>
-            <Right>
-              <Icon name="arrow-forward" />
-            </Right>
-          </ListItem>
-          <ListItem>
             <Left>
               <Text>Configurações</Text>
             </Left>
