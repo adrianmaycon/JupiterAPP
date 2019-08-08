@@ -23,7 +23,7 @@ const ListBook = [
         id: 3,
         title: 'Harry Potter e o Prisioneiro de ..',
         description: 'é um filme britânico-americano de 2004, dirigido por Alfonso Cuarón, baseado no livro de mesmo nome escrito por J. K. Rowling...',
-        image_url: 'https://www.livrariaoeste.com.br/wp-content/uploads/2019/02/151-Harry-Potter-e-o-prisioneiro-de-Azkaban-600x891.jpg',
+        image_url: 'https://images-na.ssl-images-amazon.com/images/I/81QnqHwRiUL.jpg',
         pdf_url: 'http://cabana-on.com/Ler/wp-content/uploads/2017/08/J.K.-Rowling-3-Harry-Potter-e-o-Prisioneiro-de-Askaban.pdf'
     },
     {
