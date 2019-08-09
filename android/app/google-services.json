@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "290575928192",
+    "firebase_url": "https://jupiter-10.firebaseio.com",
+    "project_id": "jupiter-10",
+    "storage_bucket": "jupiter-10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290575928192:android:535b6b7c0ec064f3",
+        "android_client_info": {
+          "package_name": "com.jupiterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290575928192-noq31nljn9nm5m2gu4d09un64pv20tkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyD1uochJB9wno3ZYUWEBiCw5-Xg6inh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290575928192-noq31nljn9nm5m2gu4d09un64pv20tkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

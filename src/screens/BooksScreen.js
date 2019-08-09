@@ -3,7 +3,7 @@ import { Container, View, Icon, Tab, Tabs, TabHeading } from 'native-base';
 import { StyleSheet } from 'react-native';
 import ConfigProfile from '../components/ConfigProfile';
 import Books from '../components/Books';
-import Texte from '../components/PageTeste';
+import Teste from '../components/PageTeste';
 
 export default class BooksScreen extends Component {
     closeDrawer = () => {
@@ -21,7 +21,7 @@ export default class BooksScreen extends Component {
                                 <Books />
                             </Tab>
                             <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="download" /></TabHeading>}>
-                                <Texte />
+                                <Teste />
                             </Tab>
                         </Tabs>
                     </View>
