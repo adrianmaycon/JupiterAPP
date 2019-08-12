@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { createBottomTabNavigator, createAppContainer} from 'react-navigation';
-import { HomeScreen, GamerScreen, FieldScreen } from './index';
+import { Dashboard, GamerScreen, FieldScreen } from './index';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const TabNavigator = createBottomTabNavigator(
 
   {
-    Home: HomeScreen,
+    Dashboard: Dashboard,
     Fields: FieldScreen,
     Gamer: GamerScreen,
   },
@@ -26,7 +26,7 @@ const TabNavigator = createBottomTabNavigator(
         let IconComponent = Icon;
         let iconName;
 
-        if (routeName === 'Home') {
+        if (routeName === 'Dashboard') {
           iconName = 'home';
         } else if (routeName === 'Fields'){
           iconName = 'handshake-o';

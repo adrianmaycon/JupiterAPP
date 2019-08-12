@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, DatePicker, Text } from 'native-base';
-export default class DatePickerExample extends Component {
+import { Content, DatePicker, Text } from 'native-base';
+export default class ListProfile extends Component {
   constructor(props) {
     super(props);
     this.state = { chosenDate: new Date() };

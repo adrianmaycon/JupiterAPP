@@ -45,15 +45,15 @@ handlePress = () => {
               <Icon name="ios-arrow-forward" />
             </Right>
           </ListItem>
-          <ListItem itemDivider />
-          <ListItem>
+          <ListItem onPress={() => navigation.navigate('ProfileScreen')} >
             <Left>
-              <Text>Conversas</Text>
+              <Text>Meus Dados</Text>
             </Left>
             <Right>
               <Icon name="arrow-forward" />
             </Right>
           </ListItem>
+          <ListItem itemDivider />
           <ListItem>
             <Left>
               <Text>Documentos</Text>
@@ -81,7 +81,7 @@ handlePress = () => {
           <ListItem itemDivider />
           <ListItem onPress={() => navigation.navigate('BooksScreen')}>
             <Left>
-              <Text>Livros</Text>
+              <Text>Biblioteca</Text>
             </Left>
             <Right>
               <Icon name="arrow-forward" />
@@ -89,14 +89,14 @@ handlePress = () => {
           </ListItem>
           <ListItem>
             <Left>
-              <Text>Ajuda 24H</Text>
+              <Text>Instituições de Ajuda</Text>
             </Left>
             <Right>
               <Icon name="arrow-forward" />
             </Right>
           </ListItem>
           <ListItem itemDivider />
-          <ListItem onPress={() => navigation.navigate('ProfileScreen')}>
+          <ListItem>
             <Left>
               <Text>Configurações</Text>
             </Left>

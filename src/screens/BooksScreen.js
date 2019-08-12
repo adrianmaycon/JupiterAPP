@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, View, Icon, Tab, Tabs, TabHeading } from 'native-base';
 import { StyleSheet } from 'react-native';
-import ConfigProfile from '../components/ConfigProfile';
 import Books from '../components/Books';
 import Teste from '../components/PageTeste';
 

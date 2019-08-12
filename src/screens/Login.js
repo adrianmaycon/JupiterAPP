@@ -78,7 +78,7 @@ export default class Login extends Component {
           <Label>Senha</Label>
           <InputText secureTextEntry onChangeText={password => this.setState({ password })} value={this.state.password} />
 
-          <Button onPress={this.handleLogin} >
+          <Button onPress={() => this.props.navigation.navigate('App')} >
             <Text style={{ fontSize: 20, color: '#000' }}>LOGIN</Text>
           </Button>
 

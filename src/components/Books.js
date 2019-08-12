@@ -78,7 +78,7 @@ export default class Books extends React.Component {
                         // onRequestClose={closeModal()}
                         >
                         <View style={{ backgroundColor: '#323236', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <View style={{ backgroundColor: 'white', width: '90%', height: '70%', display: 'flex', padding: 5, borderRadius: 5 }}>
+                            <View style={{ backgroundColor: 'white', width: '90%', height: '90%', display: 'flex', padding: 5, borderRadius: 5 }}>
                                 <Text style={{ textAlign: 'center', marginVertical: 10 }}>Harry Potter</Text>
                                 <Pdf
                                     source={{ uri: 'http://cabana-on.com/Ler/wp-content/uploads/2017/08/J.K.-Rowling-4-Harry-Potter-e-O-Calice-de-Fogo.pdf', cache: true }}

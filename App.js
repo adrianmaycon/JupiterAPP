@@ -25,7 +25,7 @@ const ProfileScreenStack = createStackNavigator({
 		screen: ProfileScreen,
 		headerMode: 'screen',
 		navigationOptions: ({ navigation }) => ({
-			header: () => <Header navigation={navigation} title="Configurações" />
+			header: () => <Header navigation={navigation} title="Meus Dados" />
 		})
 	}
 })
