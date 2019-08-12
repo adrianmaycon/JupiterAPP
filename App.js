@@ -4,6 +4,7 @@ import Login from './src/screens/Login';
 import DrawerContainer from './src/components/DrawerContainer';
 import Header from './src/components/Header';
 
+import MapScreen from './src/screens/MapScreen';
 import Dashboard from './src/screens/App';
 import ProfileScreen from './src/screens/ProfileScreen';
 import BooksScreen from './src/screens/BooksScreen';
@@ -29,6 +30,17 @@ const ProfileScreenStack = createStackNavigator({
 		})
 	}
 })
+
+const MapScreenStack = createStackNavigator({
+	MapScreen: {
+		screen: MapScreen,
+		headerMode: 'screen',
+		navigationOptions: ({ navigation }) => ({
+			header: () => <Header navigation={navigation} title="Localizar..." />
+		})
+	}
+})
+
 const BooksScreenStack = createStackNavigator({
 	BooksScreen: {
 		screen: BooksScreen,
@@ -43,6 +55,7 @@ const AppDrawer = createDrawerNavigator(
 	{
 		Dashboard: DashboardStack,
 		ProfileScreen: ProfileScreenStack,
+		MapScreen: MapScreenStack,
 		BooksScreen: BooksScreenStack,
 	},
 	{

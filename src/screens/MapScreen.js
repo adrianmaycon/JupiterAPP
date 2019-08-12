@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Container, View, Icon, Tab, Tabs, TabHeading } from 'native-base';
 import { StyleSheet } from 'react-native';
-import ConfigProfile from '../components/ConfigProfile';
-import ViewPDF from '../components/ViewPDF';
+import MapaScreen from '../components/MapScreen';
 
-export default class App extends Component {
+export default class MapScreen extends Component {
     closeDrawer = () => {
         this.drawer._root.close()
     };
@@ -16,11 +15,8 @@ export default class App extends Component {
                 <Container>
                     <View style={styles.container}>
                         <Tabs>
-                            <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="user" /></TabHeading>}>
-                                <ConfigProfile />
-                            </Tab>
-                            <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="file-text-o" /></TabHeading>}>
-                                <ViewPDF />
+                            <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="map" /></TabHeading>}>
+                                <MapaScreen />
                             </Tab>
                         </Tabs>
                     </View>
