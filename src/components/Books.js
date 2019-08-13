@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Content, Container } from 'native-base';
 import firebase from 'react-native-firebase';
 import Pdf from 'react-native-pdf';
+import BookService from '../services/BookService';
 
 // const ListBook = [
 //     {
@@ -62,6 +63,7 @@ export default class Books extends React.Component {
 
 
     state = {
+        Livros: [],
         modalVisible: false,
     };
 
@@ -69,17 +71,20 @@ export default class Books extends React.Component {
         this.setState({ modalVisible: visible });
     }
 
-    async componentDidMount() {
-        let ListBook = await firebase.firestore().collection('Livros').get();
-        ListBook.docs.map(cap => ({id: cap.id, ...cap.data()}))
+    componentDidMount() {
+        BookService.getBooks(livro => {
+            let oldLivros = this.state.Livros
+            oldLivros.push(livro)
+            this.setState({ Livros: oldLivros })
 
-        console.warn(ListBook);
-        
+            
+        })
+
     }
 
 
     render() {
-
+        console.warn('Livros: ',this.state.Livros);
         return (
             <Container>
                 <Content>
@@ -115,7 +120,7 @@ export default class Books extends React.Component {
                         </View>
                     </Modal>
 
-                    {/* {getLivros.map(list => (
+                    {this.state.Livros.map(list => (
                         console.warn(list),
 
                             <View style={styles.PostBooks} key={list.id}>
@@ -140,7 +145,7 @@ export default class Books extends React.Component {
                                     </TouchableHighlight>
                                 </View>
                             </View>
-                    ))} */}
+                    ))}
                 </Content>
             </Container>
         )

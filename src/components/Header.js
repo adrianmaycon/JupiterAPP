@@ -10,7 +10,7 @@ export default Header = props => {
         <Bar>
             <Image
                 style={{ width: 35, height: 35, marginLeft: 10 }}
-                source={{ uri: 'https://raw.githubusercontent.com/adrianmaycon/MeInforme/master/src/screens/img/Logo.png' }}
+                source={{ uri: 'https://resources.construx.com/wp-content/uploads/2016/08/brain-bite.png' }}
             />
             <TitleCenter>
                 <Title>{props.title}</Title>

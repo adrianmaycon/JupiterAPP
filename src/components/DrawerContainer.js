@@ -89,7 +89,7 @@ handlePress = () => {
           </ListItem>
           <ListItem onPress={() => navigation.navigate('MapScreen')}>
             <Left>
-              <Text>Instituições de Ajuda</Text>
+              <Text>Instituições</Text>
             </Left>
             <Right>
               <Icon name="arrow-forward" />

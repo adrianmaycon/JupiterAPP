@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, KeyboardAvoidingView, Alert, PermissionsAndroid, Platform } from 'react-native'
+import { Text, StyleSheet, Image, ImageBackground, KeyboardAvoidingView, Alert, PermissionsAndroid, Platform } from 'react-native'
 
 import UserService from '../services/UserService'
 
@@ -7,7 +7,8 @@ import { Container } from './styles/MainStyle'
 import { Header, Label, InputText, Button, Footer } from './styles/LoginStyle'
 import Loading from '../components/Loading'
 
-const logo_url = 'https://raw.githubusercontent.com/adrianmaycon/MeInforme/master/src/screens/img/Logo.png';
+const logo_url = 'https://raw.githubusercontent.com/adrianmaycon/ImagensProjetos/master/Pisiqu%C3%AA/Logo/IconSemFundo.png';
+const fundo_url = 'https://cdn5.f-cdn.com/contestentries/1465388/27319887/5c437042565d6_thumb900.jpg';
 
 export default class Login extends Component {
 
@@ -64,30 +65,40 @@ export default class Login extends Component {
   render() {
     return (
       <Container>
-        <KeyboardAvoidingView behavior="position" enabled>
+        <ImageBackground source={{ uri: fundo_url }} style={styles.ImageBackground}>
+          <KeyboardAvoidingView behavior="position" enabled>
 
-          <Loading ref={e => this.loading = e} text="Autenticando" />
+            <Loading ref={e => this.loading = e} text="Autenticando" />
 
-          <Header>
-            <Image source={{ uri: logo_url }} style={{ width: 150, height: 150 }} />
-          </Header>
+            <Header>
+              <Image source={{ uri: logo_url }} style={{ width: 250, height: 250 }} />
+            </Header>
 
-          <Label>E-mail</Label>
-          <InputText onChangeText={email => this.setState({ email })} value={this.state.email} />
+            <Label>E-mail</Label>
+            <InputText onChangeText={email => this.setState({ email })} value={this.state.email} />
 
-          <Label>Senha</Label>
-          <InputText secureTextEntry onChangeText={password => this.setState({ password })} value={this.state.password} />
+            <Label>Senha</Label>
+            <InputText secureTextEntry onChangeText={password => this.setState({ password })} value={this.state.password} />
 
-          <Button onPress={() => this.props.navigation.navigate('App')} >
-            <Text style={{ fontSize: 20, color: '#000' }}>LOGIN</Text>
-          </Button>
+            <Button onPress={this.handleLogin} >
+              <Text style={{ fontSize: 20, color: '#000' }}>LOGIN</Text>
+            </Button>
 
-          <Footer>
-            <Text style={{ fontSize: 18, color: '#FFF' }}>Esqueceu a Senha?</Text>
-          </Footer>
+            <Footer>
+              <Text style={{ fontSize: 18, color: '#FFF' }}>Esqueceu a Senha?</Text>
+            </Footer>
 
-        </KeyboardAvoidingView>
+          </KeyboardAvoidingView>
+        </ImageBackground>
       </Container>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  ImageBackground: {
+    flex: 1,
+    width: null,
+    height: null,
+  }
+});

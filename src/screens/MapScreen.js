@@ -1,39 +1,41 @@
 import React, { Component } from 'react';
-import { Container, View, Icon, Tab, Tabs, TabHeading } from 'native-base';
-import { StyleSheet } from 'react-native';
-import MapaScreen from '../components/MapScreen';
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { GamerScreen, MapScreen } from './index';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default class MapScreen extends Component {
-    closeDrawer = () => {
-        this.drawer._root.close()
-    };
-    openDrawer = () => {
-        this.drawer._root.open()
-    };
-    render() {
-        return (
-                <Container>
-                    <View style={styles.container}>
-                        <Tabs>
-                            <Tab heading={<TabHeading style={styles.tabHeading} ><Icon type="FontAwesome" name="map" /></TabHeading>}>
-                                <MapaScreen />
-                            </Tab>
-                        </Tabs>
-                    </View>
-                </Container>
-        );
+const TabNavigator = createBottomTabNavigator(
+
+    {
+        Map: MapScreen,
+        Gamer: GamerScreen,
+    },
+    {
+        tabBarOptions: {
+            activeTintColor: '#fff',
+
+            inactiveTintColor: '#E8D1E8',
+            style: {
+                backgroundColor: '#7159C1', //#EBFA0D
+            },
+            showLabel: false,
+        },
+        defaultNavigationOptions: ({ navigation }) => ({
+            tabBarIcon: ({ focused, horizontal, tintColor }) => {
+                const { routeName } = navigation.state;
+                let IconComponent = Icon;
+                let iconName;
+
+                if (routeName === 'Map') {
+                    iconName = 'map-marker';
+                } else if (routeName === 'Gamer') {
+                    iconName = 'list-alt';
+                }
+
+                return <IconComponent name={iconName} size={33} color={tintColor} />
+            }
+        })
     }
-}
 
-const styles = StyleSheet.create({
-    tabHeading: {
-        backgroundColor: "#7159C1",
-    },
-    header: {
-        backgroundColor: "#7159C1",
-        alignItems: 'center'
-    },
-    container: {
-        flex: 1,
-    },
-});
+);
+
+export default createAppContainer(TabNavigator);

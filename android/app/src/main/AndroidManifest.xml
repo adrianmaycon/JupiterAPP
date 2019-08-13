@@ -2,6 +2,7 @@
   package="com.jupiterapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
       android:name=".MainApplication"
@@ -10,6 +11,11 @@
       android:roundIcon="@drawable/icon"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+
+      <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyAyD1uochJB9wno3ZYUWEBiCw5-Xg6inh0"/>
+
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"

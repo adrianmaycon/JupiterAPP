@@ -5,11 +5,12 @@ export const Header = styled.View`
     height: 150px;
     justify-content: center;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 28%;
+    margin-bottom: 1%;
 `
 
 export const Label = styled.Text`
-    margin: 3% 10%;
+    margin: 3% 15%;
     font-size: 15px;
     text-transform: uppercase;
     color: #fff;
@@ -17,7 +18,7 @@ export const Label = styled.Text`
 `
 
 export const InputText = styled.TextInput`
-    margin: 0px 10%;
+    margin: 0px 15%;
     padding: 8px;
     border: solid 1px #FFF;
     border-radius: 5px;
@@ -30,7 +31,7 @@ export const Button = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     height: 45px;
-    margin: 22px 10%;
+    margin: 22px 15%;
     border-radius: 5px;
     background-color: #fff;
     color: #000;
