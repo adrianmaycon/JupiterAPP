@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import { GamerScreen, MapScreen } from './index';
+import { Instituicoes, MapScreen } from './index';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const TabNavigator = createBottomTabNavigator(
 
     {
         Map: MapScreen,
-        Gamer: GamerScreen,
+        Instituicoes: Instituicoes,
     },
     {
         tabBarOptions: {
@@ -27,7 +27,7 @@ const TabNavigator = createBottomTabNavigator(
 
                 if (routeName === 'Map') {
                     iconName = 'map-marker';
-                } else if (routeName === 'Gamer') {
+                } else if (routeName === 'Instituicoes') {
                     iconName = 'list-alt';
                 }
 

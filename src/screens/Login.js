@@ -8,7 +8,7 @@ import { Header, Label, InputText, Button, Footer } from './styles/LoginStyle'
 import Loading from '../components/Loading'
 
 const logo_url = 'https://raw.githubusercontent.com/adrianmaycon/ImagensProjetos/master/Pisiqu%C3%AA/Logo/IconSemFundo.png';
-const fundo_url = 'https://cdn5.f-cdn.com/contestentries/1465388/27319887/5c437042565d6_thumb900.jpg';
+const fundo_url = 'https://i.pinimg.com/originals/6f/59/91/6f59915fb14e3d9bd2745f90ea2bdb8b.png';
 
 export default class Login extends Component {
 
@@ -80,7 +80,7 @@ export default class Login extends Component {
             <Label>Senha</Label>
             <InputText secureTextEntry onChangeText={password => this.setState({ password })} value={this.state.password} />
 
-            <Button onPress={this.handleLogin} >
+            <Button onPress={() => this.props.navigation.navigate('App')} >
               <Text style={{ fontSize: 20, color: '#000' }}>LOGIN</Text>
             </Button>
 
